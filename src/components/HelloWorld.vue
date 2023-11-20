@@ -1,4 +1,5 @@
 <script setup>
+import ReactivityUse from './ReactivityUse.vue';
 defineProps({
   msg: {
     type: String,
@@ -9,6 +10,7 @@ defineProps({
 
 <template>
   <div class="greetings">
+    <ReactivityUse />
     <h1 class="green">{{ msg }}</h1>
     <h3>
       You’ve successfully created a project with
