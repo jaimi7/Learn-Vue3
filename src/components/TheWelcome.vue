@@ -9,6 +9,9 @@ import SupportIcon from "./icons/IconSupport.vue";
 </script>
 
 <template>
+  <!-- use global component  -->
+  <GlobalComponent />
+
   <!-- local components use  -->
   <WelcomeItem>
     <template #icon>
