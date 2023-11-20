@@ -1,5 +1,9 @@
 <template>
-  <div>{{msg}}</div>
+  <!-- text interpolation  -->
+  <div>
+    {{msg}}
+    <p>{{ 10+19 }}</p>
+  </div>
 </template>
 
 <script setup>
