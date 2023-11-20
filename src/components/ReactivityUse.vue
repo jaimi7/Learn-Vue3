@@ -12,18 +12,29 @@
     <p>count : {{ count }}</p>
     <p>object.count : {{ object1.count }}</p>
     <p>object.count : {{ object2.count }}</p>
-    <p>object.count : {{ object2.count }}</p>
 
     <!-- Reactivity : ref : distructure -->
     <p>distructure : {{ distructure }}</p>
 
-    <!-- use as expretion  -->
+    <!-- Reactivity : ref : use as expretion  -->
     <p>object.count : {{ object2.count.value + 10 }}</p>
+
+    <!-- Reactivity : methods -->
+    <p>{{ reactivityMethod() }}</p>
   </div>
 </template>
 
 <script setup>
-import { reactive, ref } from "vue";
+import {
+  isProxy,
+  isReactive,
+  isRef,
+  reactive,
+  ref,
+  toRef,
+  toRefs,
+  unref,
+} from "vue";
 
 const obj = reactive({ a: 10, b: 20 });
 setTimeout(() => {
@@ -53,7 +64,36 @@ setTimeout(() => {
 
 const object = { distructure: ref(0) };
 setTimeout(() => {
-    object.count.value = 30;
+  object.count.value = 30;
 }, 2000);
 let { distructure } = object;
+
+function reactivityMethod() {
+  console.log("Reactivity : Methods");
+  console.log("isRef", isRef(obj));
+  console.log("isReactive", isReactive(obj));
+  console.log("isProxy,obj", isProxy(obj));
+  console.log("isProxy,count", isProxy(count));
+  console.log("unref,obj", unref(obj));
+  console.log("unref,count", unref(count));
+  console.log("obj", obj);
+  console.log("isReactive,obj", isReactive(obj));
+  console.log("isReactive,obj.a", isReactive(obj.a));
+  console.log("isRef,obj.a", isRef(obj.a));
+
+  let toRefUse = toRef(obj, "a");
+  console.log("toRefUse", toRefUse);
+  console.log("toRefUse.value", toRefUse.value);
+  console.log("isRef,toRefUse", isRef(toRefUse));
+
+  let toRefsUse = toRefs(obj);
+  console.log("toRefsUse", toRefsUse);
+  console.log("isRef,toRefsUse", isRef(toRefsUse));
+  console.log("toRefsUse.a", toRefsUse.a);
+  console.log("toRefsUse.a.value", toRefsUse.a.value);
+  console.log("isRef,toRefsUse.a", isRef(toRefsUse.a));
+  console.log("toRefsUse.b", toRefsUse.b);
+  console.log("toRefsUse.b.value", toRefsUse.b.value);
+  console.log("isRef,toRefsUse.b", isRef(toRefsUse.b));
+}
 </script>
