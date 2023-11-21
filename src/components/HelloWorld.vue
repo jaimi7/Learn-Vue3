@@ -1,6 +1,7 @@
 <script setup>
 import ReactivityUse from './ReactivityUse.vue';
 import MethodsComputed from './MethodsComputed.vue';
+import StyleClass from './StyleClass.vue';
 defineProps({
   msg: {
     type: String,
@@ -13,6 +14,7 @@ defineProps({
   <div class="greetings">
     <ReactivityUse />
     <MethodsComputed />
+    <StyleClass />
     <h1 class="green">{{ msg }}</h1>
     <h3>
       You’ve successfully created a project with
