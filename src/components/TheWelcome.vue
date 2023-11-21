@@ -6,14 +6,17 @@ import ToolingIcon from "./icons/IconTooling.vue";
 import EcosystemIcon from "./icons/IconEcosystem.vue";
 import CommunityIcon from "./icons/IconCommunity.vue";
 import SupportIcon from "./icons/IconSupport.vue";
+
+const name = "Documentation";
 </script>
 
 <template>
   <!-- use global component  -->
   <GlobalComponent />
 
+  <!-- conditions  -->
   <!-- local components use  -->
-  <WelcomeItem>
+  <WelcomeItem v-if="name=='Documentation'">
     <template #icon>
       <DocumentationIcon />
     </template>
@@ -23,7 +26,7 @@ import SupportIcon from "./icons/IconSupport.vue";
     provides you with all information you need to get started.
   </WelcomeItem>
 
-  <WelcomeItem>
+  <WelcomeItem v-else-if="name=='Tooling'">
     <template #icon>
       <ToolingIcon />
     </template>
@@ -57,7 +60,7 @@ import SupportIcon from "./icons/IconSupport.vue";
     <code>README.md</code>.
   </WelcomeItem>
 
-  <WelcomeItem>
+  <WelcomeItem v-else-if="name=='Ecosystem'">
     <template #icon>
       <EcosystemIcon />
     </template>
@@ -80,7 +83,7 @@ import SupportIcon from "./icons/IconSupport.vue";
     a visit.
   </WelcomeItem>
 
-  <WelcomeItem>
+  <WelcomeItem v-else-if="name=='Community'">
     <template #icon>
       <CommunityIcon />
     </template>
@@ -111,7 +114,7 @@ import SupportIcon from "./icons/IconSupport.vue";
     twitter account for latest news in the Vue world.
   </WelcomeItem>
 
-  <WelcomeItem>
+  <WelcomeItem v-else-if="name=='Support'">
     <template #icon>
       <SupportIcon />
     </template>
@@ -124,4 +127,12 @@ import SupportIcon from "./icons/IconSupport.vue";
       rel="noopener"
     >becoming a sponsor</a>.
   </WelcomeItem>
+
+  <!-- show  -->
+  <p v-show="true">Show</p>
+
+  <!-- loop  -->
+  <ul>
+    <li v-for="i in 5" :key="i">{{ i }}</li>
+  </ul>
 </template>
