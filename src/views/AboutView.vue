@@ -1,15 +1,20 @@
-<template>
-  <div class="about">
-    <h1>This is an about page</h1>
-  </div>
-</template>
-
-<style>
-@media (min-width: 1024px) {
-  .about {
-    min-height: 100vh;
-    display: flex;
-    align-items: center;
+<script lang="ts">
+export default {
+  data() {
+    return {
+      age: 10 as string | number
+      // in set up
+      // const age =ref<string | number>(25);
+    }
+  },
+  methods: {
+    increment() {
+      this.age = 'Hello'
+    }
   }
 }
-</style>
+</script>
+
+<template>
+  <div>jaimi</div>
+</template>
