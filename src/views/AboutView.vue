@@ -1,10 +1,17 @@
 <script lang="ts">
+import type { PropType } from 'vue'
+import type { Job } from '@/type/job'
+
 export default {
   data() {
     return {
       age: 10 as string | number
-      // in set up
-      // const age =ref<string | number>(25);
+    }
+  },
+  props: {
+    jobs: {
+      required: true,
+      type: Array as PropType<Job[]>
     }
   },
   methods: {
