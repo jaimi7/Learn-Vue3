@@ -20,10 +20,12 @@ const router = createRouter({
     {
       path: '/task',
       name: 'task',
-      // route level code-splitting
-      // this generates a separate chunk (About.[hash].js) for this route
-      // which is lazy-loaded when the route is visited.
       component: () => import('@/views/TaskView.vue')
+    },
+    {
+      path: '/tailwind',
+      name: 'tailwind',
+      component: () => import('@/views/TailwindPage.vue')
     }
   ]
 })
