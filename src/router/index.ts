@@ -28,6 +28,11 @@ const router = createRouter({
       component: () => import('@/views/TailwindPage.vue')
     },
     {
+      path: '/daisyui',
+      name: 'daisyui',
+      component: () => import('@/views/DaisyUI.vue')
+    },
+    {
       path: '/vee-validate',
       name: 'vee-validate',
       component: () => import('@/views/VeeValidate.vue')
