@@ -38,6 +38,11 @@ const router = createRouter({
       component: () => import('@/views/FlowBite.vue')
     },
     {
+      path: '/vuetify',
+      name: 'vuetify',
+      component: () => import('@/views/VuetifyPage.vue')
+    },
+    {
       path: '/vee-validate',
       name: 'vee-validate',
       component: () => import('@/views/VeeValidate.vue')

@@ -10,6 +10,7 @@ import { RouterLink, RouterView } from 'vue-router'
     <RouterLink to="/tailwind">Tailwind</RouterLink>
     <RouterLink to="/daisyui">Daisy UI</RouterLink>
     <RouterLink to="/flowbite">Flow Bite</RouterLink>
+    <RouterLink to="/vuetify">Vuetify</RouterLink>
     <RouterLink to="/vee-validate">Validate</RouterLink>
   </nav>
 
