@@ -8,7 +8,8 @@ import { RouterLink, RouterView } from 'vue-router'
     <RouterLink to="/about">About</RouterLink>
     <RouterLink to="/task">Task</RouterLink>
     <RouterLink to="/tailwind">Tailwind</RouterLink>
-    <RouterLink to="/daisyui">DaisyUI</RouterLink>
+    <RouterLink to="/daisyui">Daisy UI</RouterLink>
+    <RouterLink to="/flowbite">Flow Bite</RouterLink>
     <RouterLink to="/vee-validate">Validate</RouterLink>
   </nav>
 

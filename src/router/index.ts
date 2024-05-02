@@ -33,6 +33,11 @@ const router = createRouter({
       component: () => import('@/views/DaisyUI.vue')
     },
     {
+      path: '/flowbite',
+      name: 'flowbite',
+      component: () => import('@/views/FlowBite.vue')
+    },
+    {
       path: '/vee-validate',
       name: 'vee-validate',
       component: () => import('@/views/VeeValidate.vue')
