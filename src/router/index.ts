@@ -26,6 +26,11 @@ const router = createRouter({
       path: '/tailwind',
       name: 'tailwind',
       component: () => import('@/views/TailwindPage.vue')
+    },
+    {
+      path: '/vee-validate',
+      name: 'vee-validate',
+      component: () => import('@/views/VeeValidate.vue')
     }
   ]
 })
