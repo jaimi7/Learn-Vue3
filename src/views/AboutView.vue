@@ -10,7 +10,7 @@ export default {
   },
   props: {
     jobs: {
-      required: true,
+      required: false,
       type: Array as PropType<Job[]>
     }
   },
